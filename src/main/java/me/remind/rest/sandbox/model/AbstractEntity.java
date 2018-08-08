@@ -34,7 +34,7 @@ public abstract class AbstractEntity {
 
     @Override
     public int hashCode() {
-        if (getId() != null) {
+       if (getId() != null) {
             return getId().hashCode();
         }
         return super.hashCode();

@@ -13,12 +13,17 @@ spring:
 
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:~/test;DB_CLOSE_DELAY=-1
 # spring.datasource.schema: classpath:/schema.sql
   jpa:
     hibernate:
       ddl-auto: create
     show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /console
 
   jackson:
     serialization:
@@ -31,3 +36,8 @@ hello:
 test:
   service:
     url: https://jsonplaceholder.typicode.com/posts/1
+
+# Application specific properties
+application:
+  apiUrl: https://api.github.com/users/DirkLangner/repos
+  token: :dummytoken
